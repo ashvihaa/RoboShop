@@ -8,13 +8,13 @@ Developer has shared the version information as MongoDB-7.x
 
 Setup the MongoDB repo file
 
-/etc/yum.repos.d/mongo.repo
+	/etc/yum.repos.d/mongo.repo
 
-[mongodb-org-7.0]
-name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/9/mongodb-org/7.0/x86_64/
-enabled=1
-gpgcheck=0
+	[mongodb-org-7.0]
+	name=MongoDB Repository
+	baseurl=https://repo.mongodb.org/yum/redhat/9/mongodb-org/7.0/x86_64/
+	enabled=1
+	gpgcheck=0
 
 *HINT
 -> Hint! You can create file by using vim /etc/yum.repos.d/mongo.repo
