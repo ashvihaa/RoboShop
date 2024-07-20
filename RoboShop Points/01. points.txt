@@ -1,0 +1,43 @@
+#catalogue
+
+-> defination Catalogue?
+	list of items that are available for sale 
+		&
+	in simple terms catalogue is nothing but menu and that menu contains items.
+		&
+	catalogue is a microservice it contain items for sale.
+
+-> all the system services are store in (those are directories)
+	ls /etc/systemd/system
+
+	eg: ls/etc/systemd/system/catalogue.service
+
+-> we can create systemd service by
+	vim /etc/systemd/system/catalogue.service
+
+-> server to server connection is possible only with private ip-address not with public ip-address
+
+-> start reading the log files
+	eg: systemctl restart catalogue ; tail /var/log/messages
+	important to  read the logs and logs are best-friend to us in the system.
+
+-> to read logs continuosly by
+	eg: systemctl restart catalogue ; tail -f /var/log/messages
+
+-> for application to connect database
+	we need
+	1. what is DB server IP		  (these are login-credentials of database
+	2. what is username & password	  ( engineer role)
+
+	1. which database		  (developer role)
+	2. which table			  (these are schema od database)
+
+-> apps are considered as two types:
+	1. stateless apps
+	2. stateful apps
+	
+	- databases are comes under statefull apps
+	- functional apps what we make are comes under stateless apps
+
+	= more connections that is made to a database is a problem in order to overcome that we use cache system which is known as 'redis'
+
