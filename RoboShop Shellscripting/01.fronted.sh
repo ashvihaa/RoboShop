@@ -7,6 +7,7 @@ rm -rf /usr/share/nginx/html/*
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
 cd /usr/share/nginx/html 
 unzip /tmp/frontend.zip
+#this is a config file which is not going to execute because we are commented it
 vim /etc/nginx/nginx.conf
 user nginx;
 worker_processes auto;
