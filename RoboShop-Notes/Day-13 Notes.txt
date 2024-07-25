@@ -1,5 +1,4 @@
-###SED (strea line editor)
-
-# sed commands 
+#SED (strea line editor)
+#sed commands 
 
 1. 
