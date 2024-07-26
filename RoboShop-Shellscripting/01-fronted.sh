@@ -1,53 +1,13 @@
-#01-Frontend
-
-The frontend is the service in RoboShop to serve the web content over Nginx. This will have the webframe for the web application.
-
-This is a static content and to serve static content we need a web server. This server
-
-Developer has chosen Nginx as a web server and thus we will install Nginx Web Server.
-
-	*HINT
-	You can list modules by using 
-		dnf module list
-
-Install Nginx
-
-	dnf module disable nginx -y
-	dnf module enable nginx:1.24 -y
-	dnf install nginx -y
-
-Start & Enable Nginx service
-
-	systemctl enable nginx 
-	systemctl start nginx 
-
-*INFO
-Try to access the service once over the browser and ensure you get some default content.
-
-Remove the default content that web server is serving.
-
-	rm -rf /usr/share/nginx/html/* 
-
-Download the frontend content
-
-	curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
-
-Extract the frontend content.
-
-	cd /usr/share/nginx/html 
-	unzip /tmp/frontend.zip
-
-*INFO
-Try to access the nginx service once more over the browser and ensure you get roboshop content.
-
-Create Nginx Reverse Proxy Configuration to reach backend services.
-
-	vim /etc/nginx/nginx.conf
-
-Add the following content
-
-	vim /etc/nginx/nginx.conf
-
+dnf module disable nginx -y
+dnf module enable nginx:1.24 -y
+dnf install nginx -y
+systemctl enable nginx
+systemctl start nginx
+rm -rf /usr/share/nginx/html/*
+curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
+cd /usr/share/nginx/html
+unzip /tmp/frontend.zip
+vim /etc/nginx/nginx.conf
 user nginx;
 worker_processes auto;
 error_log /var/log/nginx/error.log notice;
@@ -110,12 +70,4 @@ http {
 
     }
 }
-
-
-*NOTE
-Ensure you replace the localhost with the actual ip address of those component server. Word localhost is just used to avoid the failures on the Nginx Server.
-
-
-Restart Nginx Service to load the changes of the configuration.
-
-	systemctl restart nginx 
+systemctl restart nginx

@@ -1,0 +1,29 @@
+#DNS (Domain Name Server)
+
+Q. What is DNS?
+	-> the DNS (domain name system) is the phone book of the internet.
+	-> Humans access information through domain names like google.com, amazon.com, kite.zerodha.com etc......
+	-> web browser interact through Internet Protocol (IP) addresses. 
+	-> DNS translates domain name to IP addresses, so browers can load internet resources.
+
+-> when you hit 'google.com' in the browser 
+
+
+	google.com -----> local server DNS -----> RDS -----> Nameserver
+
+=> when we hit google.com it goes to our local DNS server which is given by the ISP, if the request doesnot accept that means it is not found, then it foes to 
+RDS (root domain servers).
+=> RDS is the contoller of the all domains, it contains .com, .in, .online etc.....
+=> from the RDS the request goes to NS (name servers)
+	-> Name server is the actual server that have the DNS record information
+=> from the NS the request goes to local DNS and again local DNS again request the full domain address, again NS will give the full domain address to the 
+local DNS and the local DNS will give the DNS name to the browser.
+-> this is the first time process and that based on the given DNS name
+
+=> Name servers	are offered by AWS, because we are using Route53 as a hosted place, why AWS
+	1. easy to use
+	2. easy to understand
+	3. route53 less cost
+
+=> after creating record thers is a option like TTL (time to live)
+	eg: suppose if we hit google.com and we gave 100sec, in that 100sec what we requested is available in our page only it doesn't go to the DNS record
