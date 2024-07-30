@@ -8,3 +8,55 @@
 -> exit command is returning a 'status 0 by default'. meaning the end user will assume the script is good.
 -> if we are exiting because our script is a failure then we have send failure status with exit command.
 -> exit can return the value 0-255 based on what we specify. (for ex: exit 1)
+
+#if-condition
+
+=> 3 types
+
+1.if
+	if [ expression ]
+	then
+		echo 'statement'
+	fi
+
+2.if-else
+	if [expression ]
+	then
+		echo 'statement'
+	else
+		echo 'statement'
+	fi
+
+3.else-if
+	if [expression ]
+	then 
+		echo 'statement'
+	elif [ expression ]
+	then 
+		echo 'statement'
+	else
+		echo 'statement'
+	fi
+
+#if condition - expression
+
+1.Number expression
+	-eq, -ne, -lt, -le, -gt, -ge
+	 eg:
+	 [ 1-eq 2]
+	 [ 2 -ne 2]
+2.String expression
+	==, !=, -z
+	eg:
+	[ abc == abc]
+	[xyz != abc ]
+	-z "$abc" ]
+
+3.File expression
+	-e
+	eg: 
+	[ -e /optfile ]
+
+
+
+
