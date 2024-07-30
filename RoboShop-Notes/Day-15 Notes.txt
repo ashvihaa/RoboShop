@@ -26,7 +26,6 @@
 sample () {
 echo sample function
 }
-
 sample
 
 #function example
