@@ -1,0 +1,117 @@
+#NFR (non functional requirements)
+
+1. keep code DRY
+2. username & password not to be hardcoded
+3. return of code should not be failed
+
+#functions
+
+-> #function is a name given to a set of comments
+-> #syntax
+
+	# function abc() {
+	# commands
+	# commands
+	# }
+
+(or)
+	# abc() {
+	# commands
+	# commands
+	# }
+
+=> how to call a function -----> simply call a function like a command
+# abc
+
+sample () {
+echo sample function
+}
+sample
+
+#function example
+
+#!/bin/bash
+#calling the function
+hello() {
+   echo "hello, Earth!"
+}
+hello
+
+output: bash <file-name>---> bash hi (hi is file name)
+(or)
+. <file-name>---> . hi (hi is file name)
+(or)
+. <file-name>; <function-name)---> . hi; hello (using source)
+
+#variables
+
+	# variable is a name give to a string
+	# syntax a=100 b=xyz c=1.0
+	# in shell by default there are no data types, it is all a string
+
+	# how to access a variable $VARIABLE, $a, $b, $c
+
+eg:
+
+a=samantha
+#
+echo i love you $a
+
+output:
+i love you samantha
+
+#we can use {} in variable concept
+eg:
+
+apple=20
+echo cost of apple is ${apple}Dollars
+
+output:
+20Dollars
+
+#command substitution: you can declare varibale by executing a command and store output in a variable
+eg: var=$(command)
+
+#!/bin/bash
+
+a=$(date)
+#to know the date, execute the command
+echo today date is - $a
+
+#arithmetic substitution: you can declare variable by solving the given arithmetic expression
+eg: var=$((1+2+3))
+
+#!/bin/bash
+
+a=$((1+2+3))
+#to add those numbers, we use
+echo add of these is $a
+
+#CLI (command line interface)
+eg: 
+
+ cat hii
+#!/bin/bash
+
+echo the value of x is $x
+echo the value of y is $y
+
+[root@Gopiraj ~]# x=10 y=20 bash hii
+the value of x is 10
+the value of y is 20
+
+#another approach
+eg:
+
+ cat all
+#!/bin/bash
+
+echo the first argument is $1
+echo the second argument is $2
+
+[root@Gopiraj ~]# bash all 10 20  (these variables are called as special variables) those are reserved for positional variables
+the first argument is 10
+the second argument is 20
+
+#another approach: export z=300 ; bash hii 
+echo environment variable of z is $z
