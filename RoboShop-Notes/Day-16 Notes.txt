@@ -57,6 +57,25 @@
 	eg: 
 	[ -e /optfile ]
 
+#print colors
+#here are the color codes
 
+RED 		31
+GREEN		32
+YELLOW		33
+BLUE		34
+MAGENTA		35
+CYAN 		36
 
+#syntax: echo -e "\e[COLmMESSAGE\e[0m"
+	Here:   -e= escape sequence
+		\e= enable
+		0m= disable the color
+		[COLm= which color to enable (replace COL with 31-36)
+
+eg: 
+echo -e "\e[1;31m This is red text \e[0m"
+echo -e "\e[31m This is red text \e[0m"
+echo -e "\e[1;31m This is red text \e"
+echo -e "\e[31m This is red text \e"
 
