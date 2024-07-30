@@ -1,0 +1,10 @@
+#Exit status
+
+-> every command we run on shell returns some status about it, that is called as 'exit status' of a command.
+-> Exit status is a number that ranges from 0-255
+-> these numbers are categorized as 'success(0) and failure (1-255)
+-> to refer exit status of a latest command executed we can refer a variable?. to print the status we can use 'echo $?', immediately once a command executes.
+-> when we can to stop the script we can exit command.
+-> exit command is returning a 'status 0 by default'. meaning the end user will assume the script is good.
+-> if we are exiting because our script is a failure then we have send failure status with exit command.
+-> exit can return the value 0-255 based on what we specify. (for ex: exit 1)
