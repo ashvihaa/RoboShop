@@ -3,4 +3,4 @@
 a=samantha
 b=raj
 	echo "love you $a"
-	echo "me $b
+	echo "me $b"
