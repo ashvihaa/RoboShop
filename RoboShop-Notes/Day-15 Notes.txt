@@ -115,3 +115,33 @@ the second argument is 20
 
 #another approach: export z=300 ; bash hii 
 echo environment variable of z is $z
+
+# to access variables we discussed 3 types nothing but approches
+
+###first approach
+1. with example
+eg:
+#!/bin/bash
+#first approach
+echo "the value of a is $1"
+echo "the value of b is $2"
+echo "that's end"
+
+output: bash one 100 200
+the value of a is 100
+the value of b is 200
+
+###second approach
+2. with example
+eg:
+#!/bin/bash
+#second approach
+echo "the value of a is $x"
+echo :the value of b is $y"
+echo "that's it"
+
+output: x=10 y=20 bash noo
+the value of a is 10
+the value of b is 20
+
+#another approach is export z=500
