@@ -1,0 +1,6 @@
+# shell supports two quotes
+# ' - single quote
+# " - double quote
+
+=> when to use quotes
+=> if our input to any command is having a special characters ( not a-z, not 0-9, not _ ), then to nullify those special characters we use quotes.
