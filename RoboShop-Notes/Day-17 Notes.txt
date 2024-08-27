@@ -4,3 +4,16 @@
 
 => when to use quotes
 => if our input to any command is having a special characters ( not a-z, not 0-9, not _ ), then to nullify those special characters we use quotes.
+
+-> echo *
+-> echo "*" (or) echo '*'
+
+-> single quotes are literal quoting ( strict quoting)
+-> double quotes are liberal quoting ( less strict quoting)
+
+echo 'a is $a'
+echo "a is $a"
+
+imp: Here '$' is considered as a special character.
+Note: suggestion is that use double quotes.
+
